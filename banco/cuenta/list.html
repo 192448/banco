@@ -1,0 +1,19 @@
+<header>
+</header>
+<body>
+<h2>Cuentas</h2>
+<ul>
+  {% for cuenta in object_list %}
+  <li> {{ cuenta.id }} - {{ cuenta.saldo }}$</li>
+  {% endfor %}
+</ul>
+<button>
+  <a href="/retirar">Retirar</a>
+</button>
+<button>
+  <a href="/depositar">Depositar</a>
+</button>
+<button>
+  <a href="/transferir">Transferir</a>
+</button>
+</body>

@@ -1,0 +1,18 @@
+<header>
+</header>
+<body>
+<h2>Deposito</h2>
+<form action="/depositar" method="post">
+  {% csrf_token %}
+  <label for="accountNumber">Número de Cuenta:</label>
+  <input type="number" id="cuenta" name="cuenta" required><br>
+
+  <label for="amount">Cantidad a depositar:</label>
+  <input type="number" id="cantidad" name="cantidad" required><br>
+
+  <button type="submit">Depositar</button>
+</form>
+<button>
+  <a href="/">Home</a>
+</button>
+</body>

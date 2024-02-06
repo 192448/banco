@@ -1,0 +1,21 @@
+<header>
+</header>
+<body>
+<h2>Transferencia</h2>
+<form action="/transferir" method="post">
+  {% csrf_token %}
+  <label for="accountNumber">Número de Cuenta de Origen:</label>
+  <input type="number" id="cuentaO" name="cuentaO" required><br>
+
+  <label for="accountNumber">Número de Cuenta Destino:</label>
+  <input type="number" id="cuentaD" name="cuentaD" required><br>
+
+  <label for="amount">Cantidad a Transferir:</label>
+  <input type="number" id="cantidad" name="cantidad" required><br>
+
+  <button type="submit">Transferir</button>
+</form>
+<button>
+  <a href="/">Home</a>
+</button>
+</body>
