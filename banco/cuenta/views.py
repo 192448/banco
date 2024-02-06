@@ -4,6 +4,18 @@ from django.http import HttpResponseRedirect
 from django.views import View
 from .models import Cuenta
 
+from sqlalchemy import create_engine
+from sqlalchemy.orm import Session
+
+# create engine
+engine = create_engine('postgres://banco_db_user:OLvdylM6qfzalR8JJQeK922XePTqbQSh@dpg-cn0shcla73kc73edas8g-a.oregon-postgres.render.com/banco_db')
+
+"""
+with Session(engine) as session:
+        #return dictionary containing the serialized data of all videogames
+        return serialize_raw_query_data(session.execute(text(SELECT)))
+"""
+
 # Create your views here.
 class CuentaList(ListView):
     model = Cuenta
